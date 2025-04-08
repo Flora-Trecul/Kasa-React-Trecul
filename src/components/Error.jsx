@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function Error() {
 	return (
-		<main className="error">
+		<section className="error">
 			<h2 className="error__title">404</h2>
 			<p className="error__text">
 				Oups ! La page que <br />
@@ -11,7 +11,7 @@ function Error() {
 			<Link to="/" className="error__link">
 				Retourner sur la page d'accueil
 			</Link>
-		</main>
+		</section>
 	)
 }
 export default Error

@@ -1,8 +1,7 @@
-function Banner({ src, desc }) {
+function Banner({ section, src, desc }) {
 	return (
-		<div className="banner">
-			<img src={src} alt={`Bannière : Panorama de ${desc}`} className="banner__img" />
-			<div className="banner__background"></div>
+		<div className={section + "__banner banner"}>
+			<img src={src} alt={`Bannière : ${desc}`} className="banner__img" />
 			<div className="banner__overlay"></div>
 		</div>
 	)
