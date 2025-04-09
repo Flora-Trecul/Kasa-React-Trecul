@@ -28,7 +28,9 @@ function About() {
 
 	return (
 		<section className="about">
-			<Banner section="about" src={cover} desc="Panorama de montagnes" />
+			<div className="banner">
+				<Banner section="about" src={cover} desc="Panorama de montagnes" />
+			</div>
 
 			<div className="about__content">
 				{aboutValues.map((value, index) => (

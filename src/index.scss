@@ -243,10 +243,10 @@ $main-color: #ff6060;
 .banner {
 	position: relative;
 	@include banner;
+	// background-color: #f6f6f6;
 
 	&__img {
 		object-fit: cover;
-		background-color: #f6f6f6;
 		@include banner;
 	}
 
@@ -261,15 +261,22 @@ $main-color: #ff6060;
 
 .collapse {
 	position: relative;
+	width: 100%;
 
 	&__content {
 		display: none;
 		text-align: justify;
 		padding: 20px;
 		font-weight: 400;
+		line-height: 143%;
 
 		&.active {
 			display: block;
+		}
+
+		span {
+			font-size: inherit;
+			font-weight: inherit;
 		}
 	}
 
@@ -292,7 +299,8 @@ $main-color: #ff6060;
 
 	@media (max-width: 768px) {
 		&__content {
-			font-size: 14px;
+			font-size: 12px;
+			padding: 10px 20px;
 		}
 
 		&__title {
@@ -340,5 +348,197 @@ $main-color: #ff6060;
 		position: absolute;
 		top: 0;
 		background: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0), rgba(4, 4, 4, 0.41), rgba(0, 0, 0, 1));
+	}
+}
+
+.lodging {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	padding: 0 35px;
+
+	@media (max-width: 768px) {
+		padding: 0 20px;
+		gap: 10px;
+	}
+
+	> * {
+		max-width: 1240px;
+	}
+
+	&__banner {
+		height: 100%;
+	}
+
+	.banner {
+		height: 415px;
+
+		@media (max-width: 768px) {
+			height: 255px;
+		}
+
+		&__img {
+			height: 100%;
+		}
+
+		&__arrow {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			opacity: 0.87;
+			cursor: pointer;
+
+			&.next {
+				right: 25px;
+			}
+
+			&.previous {
+				left: 25px;
+			}
+
+			@media (max-width: 768px) {
+				height: 20px;
+
+				&.next {
+					right: 10px;
+				}
+
+				&.previous {
+					left: 10px;
+				}
+			}
+		}
+
+		&__currentSlide {
+			color: white;
+			position: absolute;
+			bottom: 30px;
+			left: 50%;
+			transform: translateX(-50%);
+
+			@media (max-width: 768px) {
+				display: none;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+
+		&__title {
+			font-size: 36px;
+			color: $main-color;
+			margin-bottom: 5px;
+		}
+
+		&__tags {
+			margin-top: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+
+		&__tags__tag {
+			background-color: $main-color;
+			font-size: 14px;
+			color: white;
+			font-weight: 700;
+			text-align: center;
+			width: 172px;
+			height: 25px;
+			line-height: 25px;
+			border-radius: 10px;
+		}
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+
+			&__title {
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+
+			&__content {
+				font-size: 14px;
+			}
+
+			&__tags__tag {
+				width: 110px;
+				height: 18px;
+				line-height: 18px;
+				font-size: 10px;
+			}
+		}
+
+		&__host {
+			&__content {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				margin-bottom: 20px;
+				width: 165px;
+
+				&__name {
+					color: $main-color;
+					text-align: right;
+				}
+
+				&__picture {
+					width: 64px;
+					border-radius: 50%;
+				}
+			}
+
+			&__ranking {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			@media (max-width: 768px) {
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: space-between;
+				padding: 20px 0 10px 0;
+
+				&__ranking {
+					align-items: center;
+					gap: 5px;
+					img {
+						height: 13px;
+					}
+				}
+
+				&__content {
+					justify-content: flex-end;
+					width: 100px;
+					margin-bottom: 0;
+
+					&__name {
+						font-size: 12px;
+					}
+
+					&__picture {
+						width: 32px;
+					}
+				}
+			}
+		}
+	}
+
+	&__desc {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		gap: 75px;
+		padding-bottom: 45px;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+			gap: 20px;
+			padding-bottom: 30px;
+		}
 	}
 }

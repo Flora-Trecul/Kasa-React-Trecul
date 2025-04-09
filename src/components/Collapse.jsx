@@ -1,4 +1,6 @@
 import { useState } from "react"
+import chevronUp from "../assets/icon_chevron_up.png"
+import chevronDown from "../assets/icon_chevron_down.png"
 
 function Collapse({ title, content }) {
 	const [open, setOpen] = useState("haut")
@@ -10,7 +12,7 @@ function Collapse({ title, content }) {
 			<img
 				className={"collapse__icon"}
 				onClick={() => setOpen(open === "haut" ? "bas" : "haut")}
-				src={`src/assets/icone_chevron_${open}.png`}
+				src={open === "haut" ? chevronUp : chevronDown}
 				alt={`Icône chevron vers le ${open}`}
 			/>
 			<p className={"collapse__content" + active}>{content}</p>
