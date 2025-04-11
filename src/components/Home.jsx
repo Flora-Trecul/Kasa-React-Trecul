@@ -1,21 +1,35 @@
 import Card from "./Card"
 import Banner from "./Banner"
 import cover from "../assets/photo_home_mer-falaises.jpg"
-import listLodgings from "../data/logements.json"
+import "../styles/Home.scss"
+import { useNavigate } from "react-router-dom"
 
-function Home() {
+function Home({ lodgings }) {
+	const title = (
+		<>
+			Chez vous, <br />
+			partout et ailleurs
+		</>
+	)
+
+	const navigate = useNavigate()
+
+	const handleClick = (id) => navigate(`/lodging/${id}`)
+
 	return (
 		<section className="home">
 			<div className="banner">
-				<Banner section="home" src={cover} desc="Panorama de falaises en bord de mer" />
+				<Banner section="home" src={cover} desc="Panorama de falaises en bord de mer" title={title} />
 			</div>
-			<h2 className="home__title">
-				Chez vous,
-				<br /> partout et ailleurs
-			</h2>
+
 			<div className="gallery">
-				{listLodgings.map((lodging) => (
-					<Card key={`card-${lodging.id}`} title={lodging.title} id={lodging.id} cover={lodging.cover} />
+				{lodgings.map((lodging) => (
+					<Card
+						key={`card-${lodging.id}`}
+						handleClick={() => handleClick(lodging.id)}
+						title={lodging.title}
+						cover={lodging.cover}
+					/>
 				))}
 			</div>
 		</section>

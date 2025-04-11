@@ -1,0 +1,69 @@
+@import "../index.scss";
+
+.collapse {
+	position: relative;
+	width: 100%;
+
+	&__content {
+		// display: none;
+		opacity: 0;
+		text-align: justify;
+		padding: 20px;
+		font-weight: 400;
+		line-height: 143%;
+		height: 0px;
+		transition: height 300ms;
+
+		&.active {
+			// display: block;
+			// height: 50px;
+			opacity: 1;
+		}
+
+		span {
+			font-size: inherit;
+			font-weight: inherit;
+		}
+	}
+
+	&__title {
+		background-color: $main-color;
+		border-radius: 5px;
+		font-size: 24px;
+		font-weight: 700;
+		color: white;
+		padding: 10px 20px;
+	}
+
+	&__icon {
+		width: 32px;
+		position: absolute;
+		cursor: pointer;
+		top: 17px;
+		right: 20px;
+		transform: rotate(0deg);
+		transition: transform 300ms ease-out;
+
+		&.active {
+			transform: rotate(-180deg);
+		}
+	}
+
+	@media (max-width: 768px) {
+		&__content {
+			font-size: 12px;
+			padding: 10px 20px;
+		}
+
+		&__title {
+			font-size: 16px;
+			padding: 10px;
+		}
+
+		&__icon {
+			top: 15px;
+			right: 10px;
+			width: 24px;
+		}
+	}
+}

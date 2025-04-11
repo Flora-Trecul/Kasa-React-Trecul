@@ -1,0 +1,45 @@
+@import "../index.scss";
+
+.error {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 99px 0 139px 0;
+	gap: 139px;
+
+	&__title {
+		color: $main-color;
+		font-weight: 700;
+		font-size: 240px;
+		line-height: 80%;
+	}
+
+	&__text {
+		color: $main-color;
+		font-size: 28px;
+		text-align: center;
+	}
+
+	@media (min-width: 769px) {
+		br {
+			display: none;
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: 93px 0 113px 0;
+
+		&__title {
+			font-size: 96px;
+		}
+
+		&__text {
+			font-size: 18px;
+		}
+
+		&__link {
+			font-size: 14px;
+		}
+	}
+}

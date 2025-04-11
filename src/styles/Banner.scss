@@ -1,0 +1,28 @@
+@mixin banner {
+	border-radius: 25px;
+	height: 223px;
+	width: 100%;
+
+	@media (max-width: 768px) {
+		height: 111px;
+		border-radius: 10px;
+	}
+}
+
+.banner {
+	position: relative;
+	@include banner;
+
+	&__img {
+		object-fit: cover;
+		@include banner;
+	}
+
+	&__overlay {
+		@include banner;
+		position: absolute;
+		top: 0;
+		background-color: rgba(0, 0, 0, 0.3);
+		mix-blend-mode: darken;
+	}
+}

@@ -1,13 +1,10 @@
 import Slideshow from "./Slideshow.jsx"
 import Collapse from "./Collapse.jsx"
-import listLodgings from "../data/logements.json"
-import { useLocation } from "react-router-dom"
 import starFull from "../assets/icon_star_full.png"
 import starEmpty from "../assets/icon_star_empty.png"
+import "../styles/Lodging.scss"
 
-function Lodging() {
-	const currentId = useLocation().pathname.toString().split("/lodging/")[1]
-	const lodging = listLodgings.find((lodging) => lodging.id === currentId)
+function Lodging({ lodging }) {
 	const range = [1, 2, 3, 4, 5]
 
 	return (

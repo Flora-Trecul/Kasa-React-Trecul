@@ -1,6 +1,7 @@
 import Banner from "./Banner"
 import Collapse from "./Collapse"
 import cover from "../assets/photo_about_panorama-montagne.jpg"
+import "../styles/About.scss"
 
 function About() {
 	const aboutValues = [

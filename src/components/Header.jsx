@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 import logo from "../assets/logo_Kasa.png"
 import logoSmall from "../assets/logo_Kasa_small.png"
+import "../styles/Header.scss"
 
 function Header() {
 	const currentPath = useLocation().pathname
