@@ -5,24 +5,34 @@
 	width: 100%;
 
 	&__content {
-		// display: none;
-		opacity: 0;
-		text-align: justify;
-		padding: 20px;
-		font-weight: 400;
-		line-height: 143%;
-		height: 0px;
-		transition: height 300ms;
+		visibility: hidden;
+		overflow: hidden;
+		transition: height 300ms ease-out;
 
-		&.active {
-			// display: block;
-			// height: 50px;
-			opacity: 1;
+		.slide {
+			text-align: justify;
+			padding: 20px;
+			font-weight: 400;
+			line-height: 143%;
+			transform: translateY(-500px);
+			transition: transform 300ms;
+		}
+
+		&.active .slide {
+			visibility: visible;
+			transform: translateY(0);
 		}
 
 		span {
 			font-size: inherit;
 			font-weight: inherit;
+		}
+
+		@media (max-width: 768px) {
+			.slide {
+				font-size: 12px;
+				padding: 10px 20px;
+			}
 		}
 	}
 
@@ -33,6 +43,11 @@
 		font-weight: 700;
 		color: white;
 		padding: 10px 20px;
+
+		@media (max-width: 768px) {
+			font-size: 16px;
+			padding: 10px;
+		}
 	}
 
 	&__icon {
@@ -47,20 +62,8 @@
 		&.active {
 			transform: rotate(-180deg);
 		}
-	}
 
-	@media (max-width: 768px) {
-		&__content {
-			font-size: 12px;
-			padding: 10px 20px;
-		}
-
-		&__title {
-			font-size: 16px;
-			padding: 10px;
-		}
-
-		&__icon {
+		@media (max-width: 768px) {
 			top: 15px;
 			right: 10px;
 			width: 24px;
