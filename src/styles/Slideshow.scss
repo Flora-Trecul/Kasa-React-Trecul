@@ -1,6 +1,7 @@
 .slideshow {
 	height: 415px;
 	overflow: hidden;
+	width: 100%;
 
 	@media (max-width: 768px) {
 		height: 255px;
@@ -8,6 +9,41 @@
 
 	.banner__img {
 		height: 100%;
+	}
+
+	@keyframes slideshow-left {
+		from {
+			transform: translateX(calc(-100% / 3));
+		}
+
+		to {
+			transform: translateX(calc(-100% * 2 / 3));
+		}
+	}
+
+	@keyframes slideshow-right {
+		from {
+			transform: translateX(calc(-100% / 3));
+		}
+
+		to {
+			transform: translateX(0);
+		}
+	}
+
+	.slider {
+		width: 300%;
+		display: flex;
+		transform: translateX(-33.33%);
+		animation: none;
+
+		&.slide-next {
+			animation: slideshow-left 1s forwards;
+		}
+
+		&.slide-previous {
+			animation: slideshow-right 1s forwards;
+		}
 	}
 
 	&__arrow {
