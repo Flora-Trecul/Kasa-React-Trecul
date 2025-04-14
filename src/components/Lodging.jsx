@@ -5,6 +5,8 @@ import starEmpty from "../assets/icon_star_empty.png"
 import "../styles/Lodging.scss"
 
 function Lodging({ lodging }) {
+	// Pour la génération des étoiles selon la valeur de la propriété "rating"
+	// On compare rating à chaque valeur de range : étoile pleine si rating est >= sinon étoile vide
 	const range = [1, 2, 3, 4, 5]
 
 	return (
@@ -25,7 +27,11 @@ function Lodging({ lodging }) {
 				<div className="lodging__info__host">
 					<div className="lodging__info__host__content">
 						<p className="lodging__info__host__content__name">{lodging.host.name}</p>
-						<img className="lodging__info__host__content__picture" src={lodging.host.picture} alt="Photo de l'hôte" />
+						<img
+							className="lodging__info__host__content__picture"
+							src={lodging.host.picture}
+							alt={`Photo de l'hôte ${lodging.host.name}`}
+						/>
 					</div>
 					<div className="lodging__info__host__ranking">
 						{range.map((number, index) =>

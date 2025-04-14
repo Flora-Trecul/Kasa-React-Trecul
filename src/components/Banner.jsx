@@ -5,6 +5,8 @@ function Banner({ section, src, desc, title, direction, srcNext, srcPrevious }) 
 	const path = useLocation().pathname
 	const slider = path.startsWith("/lodging") ? " slider" + direction : ""
 
+	// Adaptation du composant selon la page où il est utilisé : ajout de deux img sur les pages logements pour le slideshow
+	// Ajout d'un overlay sur les autres pages + titre sur la page d'accueil
 	return (
 		<div className={section + "__banner" + slider}>
 			{path.startsWith("/lodging") && (

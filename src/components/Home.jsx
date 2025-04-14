@@ -12,6 +12,9 @@ function Home({ lodgings }) {
 		</>
 	)
 
+	// useNavigate au lieu d'un Link englobant la Card, plus grande liberté sur les instructions à appliquer au clic
+	// Permet aussi de ne pas gêner l'affichage d'autres éléments éventuellement cliquables sur la carte à l'avenir
+	// Permettra également de gérer la redirection pour utilisateur authentifié ou non
 	const navigate = useNavigate()
 
 	const handleClick = (id) => navigate(`/lodging/${id}`)

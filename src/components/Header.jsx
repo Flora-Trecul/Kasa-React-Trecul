@@ -5,6 +5,7 @@ import logoSmall from "../assets/logo_Kasa_small.png"
 import "../styles/Header.scss"
 
 function Header() {
+	// useLocation pour désactiver le lien de la page actuelle en ajoutant la classe "active"
 	const currentPath = useLocation().pathname
 
 	return (

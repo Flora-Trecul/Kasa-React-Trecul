@@ -1,14 +1,13 @@
+@import "../index.scss";
+
 .header {
 	width: 100%;
-	display: flex;
-	justify-content: center;
+	@include flexbox(row, center, initial, 0);
 
 	&__container {
 		max-width: 1240px;
 		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@include flexbox(row, space-between, center, 0);
 		padding: 35px;
 		margin: 0;
 
@@ -23,31 +22,31 @@
 		}
 
 		img {
-			@media (max-width: 768px) {
-				width: 130px;
+			@media (max-width: 350px) {
+				width: 100px;
 			}
 		}
 	}
 
 	&__navbar {
-		font-size: 24px;
 		color: inherit;
-		display: flex;
-		align-items: center;
+		@include flexbox(row, initial, center, 57px);
 
 		&__link {
 			text-decoration: none;
-			margin-left: 57px;
 			font-size: 24px;
 
 			&.active {
 				text-decoration: underline;
 				pointer-events: none;
 			}
+		}
 
-			@media (max-width: 768px) {
+		@media (max-width: 768px) {
+			gap: 15px;
+
+			&__link {
 				font-size: 12px;
-				margin-left: 15px;
 				text-transform: uppercase;
 			}
 		}

@@ -1,12 +1,8 @@
 @import "../index.scss";
 
 .error {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 99px 0 139px 0;
-	gap: 139px;
+	@include flexbox(column, center, center, 139px);
+	padding: 105px 0 139px 0;
 
 	&__title {
 		color: $main-color;
@@ -28,7 +24,9 @@
 	}
 
 	@media (max-width: 768px) {
-		padding: 93px 0 113px 0;
+		height: 100%;
+		padding: 0 0 20px 0;
+		gap: 99px;
 
 		&__title {
 			font-size: 96px;

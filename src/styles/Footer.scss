@@ -1,11 +1,10 @@
+@import "../index.scss";
+
 .footer {
 	background-color: black;
 	height: 209px;
 	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-end;
+	@include flexbox(column, flex-end, center, 0);
 
 	@media (max-width: 768px) {
 		justify-content: center;

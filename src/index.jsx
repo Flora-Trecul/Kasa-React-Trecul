@@ -10,7 +10,10 @@ import Footer from "./components/Footer"
 import About from "./components/About"
 import Error from "./components/Error"
 
+// Importation unique des données (à remplacer ici pour traiter la nouvelle base de données)
+// Mapping avec le composant Lodging pour générer une route par logement et passer en prop uniquement l'objet associé à l'URL
 import listLodgings from "./data/logements.json"
+// Récupération des propriétés utilisées sur la page d'accueil pour ne pas passer la liste entière en props
 const lodgingsHome = listLodgings.map(({ id, title, cover }) => ({
 	id,
 	title,

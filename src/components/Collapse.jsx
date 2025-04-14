@@ -11,12 +11,12 @@ function Collapse({ title, content }) {
 	// On crée une référence et on l'associe ensuite au paragraphe dont on veut calculer la hauteur grâce à l'attribut ref
 	const contentRef = useRef(null)
 
-	// Actualise la hauteur à chaque fois que l'état de la collpase change
-	// La propriété .current est spécifique au hook useEffect
-	// La propriété scrollHeigth permet de mesurer la hauteur en pixels d'un élément
+	// [open] : actualise la hauteur à chaque fois que l'état de la collapse change
 	useEffect(() => {
 		// La valeur height générée est trop grande, on récupère le padding-bottom pour le soustraire
+		// parseFloat récupère un nombre décimal dans une string commençant par un nombre ("20.5" dans "20.5px")
 		const padding = parseFloat(getComputedStyle(contentRef.current).paddingBottom)
+		// Propriété .current spécifique au hook useEffect + propriété scrollHeigth pour mesurer la hauteur en px de l'élément
 		open ? setHeight(`${contentRef.current.scrollHeight - padding}px`) : setHeight("0px")
 	}, [open])
 

@@ -1,3 +1,25 @@
+@import "../index.scss";
+
+@keyframes slideshow-left {
+	from {
+		transform: translateX(calc(-100% / 3));
+	}
+
+	to {
+		transform: translateX(calc(-100% * 2 / 3));
+	}
+}
+
+@keyframes slideshow-right {
+	from {
+		transform: translateX(calc(-100% / 3));
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
 .slideshow {
 	height: 415px;
 	overflow: hidden;
@@ -9,47 +31,25 @@
 
 	.banner__img {
 		height: 100%;
-	}
-
-	@keyframes slideshow-left {
-		from {
-			transform: translateX(calc(-100% / 3));
-		}
-
-		to {
-			transform: translateX(calc(-100% * 2 / 3));
-		}
-	}
-
-	@keyframes slideshow-right {
-		from {
-			transform: translateX(calc(-100% / 3));
-		}
-
-		to {
-			transform: translateX(0);
-		}
+		border-radius: 0;
 	}
 
 	.slider {
 		width: 300%;
 		display: flex;
 		transform: translateX(-33.33%);
-		animation: none;
 
 		&.slide-next {
-			animation: slideshow-left 1s forwards;
+			animation: slideshow-left 0.7s forwards;
 		}
 
 		&.slide-previous {
-			animation: slideshow-right 1s forwards;
+			animation: slideshow-right 0.7s forwards;
 		}
 	}
 
 	&__arrow {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		@include absolute-centerY;
 		opacity: 0.87;
 		cursor: pointer;
 		/* Ombre pour que les flèches restent visibles sur une image blanche */

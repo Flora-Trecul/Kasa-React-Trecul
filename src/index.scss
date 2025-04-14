@@ -13,4 +13,23 @@ $main-color: #ff6060;
 	min-height: 100vh;
 	display: grid;
 	grid-template-rows: auto 1fr auto;
+
+	section {
+		max-width: 1240px;
+		margin: auto;
+	}
+}
+
+@mixin flexbox($direction, $aligncontent, $alignitems, $gap) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $aligncontent;
+	align-items: $alignitems;
+	gap: $gap;
+}
+
+@mixin absolute-centerY {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }

@@ -1,17 +1,17 @@
+@import "../index.scss";
+
+$shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
 .home {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include flexbox(column, initial, center, 0);
 	padding: 0 35px;
-	max-width: 1240px;
-	margin: auto;
 
 	@media (max-width: 768px) {
 		padding: 0 20px;
 	}
 
 	.banner {
-		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+		box-shadow: $shadow;
 
 		&__overlay {
 			background-color: rgba(0, 0, 0, 0.6);
@@ -20,19 +20,17 @@
 
 	&__title {
 		font-weight: 700;
-		position: absolute;
 		color: white;
 		font-size: 24px;
 		width: 100%;
-		top: 50%;
-		transform: translateY(-50%);
+		@include absolute-centerY;
 
 		@media (min-width: 769px) {
 			font-size: 44px;
 			text-align: center;
 			-webkit-text-stroke: 2px black;
 			paint-order: stroke fill;
-			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			text-shadow: $shadow;
 
 			br {
 				display: none;
@@ -48,9 +46,7 @@
 		border-radius: 25px;
 		margin: 35px 0;
 		width: 100%;
-		display: flex;
-		flex-direction: column;
-		gap: 22px;
+		@include flexbox(column, initial, initial, 22px);
 
 		@media (min-width: 769px) {
 			background-color: #f6f6f6;
