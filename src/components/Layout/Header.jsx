@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom"
-import { useLocation } from "react-router-dom"
-import logo from "../assets/logo_Kasa.png"
-import logoSmall from "../assets/logo_Kasa_small.png"
-import "../styles/Header.scss"
+import { Link, useLocation } from "react-router-dom"
+import logo from "../../assets/logo_Kasa.png"
+import logoSmall from "../../assets/logo_Kasa_small.png"
+import "./Header.scss"
 
 function Header() {
 	// useLocation pour désactiver le lien de la page actuelle en ajoutant la classe "active"

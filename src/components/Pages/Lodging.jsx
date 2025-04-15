@@ -1,8 +1,8 @@
-import Slideshow from "./Slideshow.jsx"
-import Collapse from "./Collapse.jsx"
-import starFull from "../assets/icon_star_full.png"
-import starEmpty from "../assets/icon_star_empty.png"
-import "../styles/Lodging.scss"
+import Slideshow from "../Shared/Slideshow"
+import Collapse from "../Shared/Collapse"
+import starFull from "../../assets/icon_star_full.png"
+import starEmpty from "../../assets/icon_star_empty.png"
+import "./Lodging.scss"
 
 function Lodging({ lodging }) {
 	// Pour la génération des étoiles selon la valeur de la propriété "rating"

@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom"
-import "../styles/Banner.scss"
+import "./Banner.scss"
 
 function Banner({ section, src, desc, title, direction, srcNext, srcPrevious }) {
 	const path = useLocation().pathname

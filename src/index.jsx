@@ -3,12 +3,12 @@ import { createRoot } from "react-dom/client"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import "./index.scss"
 
-import Home from "./components/Home"
-import Lodging from "./components/Lodging"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import About from "./components/About"
-import Error from "./components/Error"
+import Header from "./components/Layout/Header"
+import Footer from "./components/Layout/Footer"
+import Home from "./components/Pages/Home"
+import Lodging from "./components/Pages/Lodging"
+import About from "./components/Pages/About"
+import Error from "./components/Pages/Error"
 
 // Importation unique des données (à remplacer ici pour traiter la nouvelle base de données)
 // Mapping avec le composant Lodging pour générer une route par logement et passer en prop uniquement l'objet associé à l'URL

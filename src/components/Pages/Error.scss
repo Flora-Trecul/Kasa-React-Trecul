@@ -1,4 +1,4 @@
-@import "../index.scss";
+@import "../../index.scss";
 
 .error {
 	@include flexbox(column, center, center, 139px);
@@ -9,12 +9,20 @@
 		font-weight: 700;
 		font-size: 240px;
 		line-height: 80%;
+
+		@media (max-width: 768px) {
+			font-size: 96px;
+		}
 	}
 
 	&__text {
 		color: $main-color;
 		font-size: 28px;
 		text-align: center;
+
+		@media (max-width: 768px) {
+			font-size: 18px;
+		}
 	}
 
 	@media (min-width: 769px) {
@@ -27,14 +35,6 @@
 		height: 100%;
 		padding: 0 0 20px 0;
 		gap: 99px;
-
-		&__title {
-			font-size: 96px;
-		}
-
-		&__text {
-			font-size: 18px;
-		}
 
 		&__link {
 			font-size: 14px;

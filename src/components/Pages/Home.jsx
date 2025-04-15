@@ -1,7 +1,7 @@
-import Card from "./Card"
-import Banner from "./Banner"
-import cover from "../assets/photo_home_mer-falaises.jpg"
-import "../styles/Home.scss"
+import Card from "../Shared/Card"
+import Banner from "../Shared/Banner"
+import cover from "../../assets/photo_home_mer-falaises.jpg"
+import "./Home.scss"
 import { useNavigate } from "react-router-dom"
 
 function Home({ lodgings }) {

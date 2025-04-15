@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react"
-import chevronUp from "../assets/icon_chevron_up.png"
-import "../styles/Collapse.scss"
+import chevronUp from "../../assets/icon_chevron_up.png"
+import "./Collapse.scss"
 
 function Collapse({ title, content }) {
 	const [open, setOpen] = useState(false)

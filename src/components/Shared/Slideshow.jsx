@@ -1,8 +1,8 @@
-import Banner from "./Banner.jsx"
-import arrowNext from "../assets/arrow_gallery_next.png"
-import arrowPrevious from "../assets/arrow_gallery_previous.png"
+import Banner from "./Banner"
+import arrowNext from "../../assets/arrow_gallery_next.png"
+import arrowPrevious from "../../assets/arrow_gallery_previous.png"
 import { useState } from "react"
-import "../styles/Slideshow.scss"
+import "./Slideshow.scss"
 
 function Slideshow({ gallery, title }) {
 	const [srcCurrent, setCurrent] = useState(0)
