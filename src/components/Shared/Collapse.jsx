@@ -29,7 +29,7 @@ function Collapse({ title, content }) {
 				src={chevronUp}
 				alt={`Icône chevron vers le ${alt}`}
 			/>
-			<div ref={contentRef} style={{ height: contentHeight }} className={`collapse__content${open ? " active" : ""}`}>
+			<div ref={contentRef} style={{ height: contentHeight }} className={`collapse__content${active}`}>
 				<p className="collapse__content slide">{content}</p>
 			</div>
 		</>
