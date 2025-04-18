@@ -11,7 +11,7 @@
 		padding: 35px;
 		margin: 0;
 
-		@media (max-width: 768px) {
+		@media ($mobile) {
 			padding: 20px;
 		}
 	}
@@ -42,7 +42,7 @@
 			}
 		}
 
-		@media (max-width: 768px) {
+		@media ($mobile) {
 			gap: 15px;
 
 			&__link {

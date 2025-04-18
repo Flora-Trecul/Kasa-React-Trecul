@@ -27,6 +27,10 @@ createRoot(document.getElementById("root")).render(
 			<main>
 				<Routes>
 					<Route path="/" element={<Home lodgings={lodgingsHome} />} />
+					{/* Pas forEach car applique une fonction à tout un tableau mais ne retourne aucune valeur
+					Pas de valeur à traiter, donc on n'obtient pas une liste de routes avec toutes les id des hébergements
+					Option : boucle for ou reduce+acc sur listLodgings pour push chaque route dans un nouveau tableau
+					Map reste le plus simple et efficace car génère directement un nouveau tableau */}
 					{listLodgings.map((lodging) => (
 						<Route path={`/lodging/${lodging.id}`} element={<Lodging lodging={lodging} />} />
 					))}

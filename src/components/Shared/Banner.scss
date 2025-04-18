@@ -1,9 +1,11 @@
+@import "../../index.scss";
+
 @mixin banner {
 	border-radius: 25px;
 	height: 223px;
 	width: 100%;
 
-	@media (max-width: 768px) {
+	@media ($mobile) {
 		height: 111px;
 		border-radius: 10px;
 	}

@@ -25,7 +25,7 @@
 	overflow: hidden;
 	width: 100%;
 
-	@media (max-width: 768px) {
+	@media ($mobile) {
 		height: 255px;
 	}
 
@@ -63,7 +63,7 @@
 			left: 25px;
 		}
 
-		@media (max-width: 768px) {
+		@media ($mobile) {
 			height: 20px;
 
 			&.next {
@@ -85,7 +85,7 @@
 		/* Ombre pour rendre la numérotation plus visible sur les images claires */
 		text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
 
-		@media (max-width: 768px) {
+		@media ($mobile) {
 			display: none;
 		}
 	}
